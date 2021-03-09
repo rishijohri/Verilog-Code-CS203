@@ -1,0 +1,109 @@
+$date
+	Sat Nov 14 18:49:19 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! out2 [3:0] $end
+$var wire 1 " out $end
+$var reg 1 # clock $end
+$var reg 4 $ in [3:0] $end
+$var reg 1 % in1 $end
+$var reg 1 & in2 $end
+$var reg 1 ' in3 $end
+$var reg 1 ( in4 $end
+$var reg 1 ) in5 $end
+$scope module switch $end
+$var wire 4 * in [3:0] $end
+$var wire 4 + out [3:0] $end
+$var reg 16 , configure [15:0] $end
+$upscope $end
+$scope module tile $end
+$var wire 1 # clock $end
+$var wire 1 % in1 $end
+$var wire 1 & in2 $end
+$var wire 1 ' in3 $end
+$var wire 1 ( in4 $end
+$var wire 1 ) in5 $end
+$var reg 33 - mem [32:0] $end
+$var reg 1 " out $end
+$var reg 1 . tem $end
+$var reg 1 / tem2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x/
+1.
+b11111111111111111111111111111110 -
+b1000010000100001 ,
+bx +
+bx *
+1)
+1(
+1'
+1&
+1%
+bx $
+0#
+1"
+bx !
+$end
+#10
+1/
+1#
+#16
+0"
+0.
+0)
+0(
+0'
+0&
+0%
+#20
+0#
+#30
+0/
+1#
+#32
+1"
+1.
+1)
+1'
+#40
+0#
+#48
+b1010 !
+b1010 +
+b1010 $
+b1010 *
+#50
+1/
+1#
+#58
+b1000 !
+b1000 +
+b1000 $
+b1000 *
+#60
+0#
+#68
+b1011 !
+b1011 +
+b1011 $
+b1011 *
+#70
+1#
+#78
+b10 !
+b10 +
+b10 $
+b10 *
+#80
+0#
+#88

@@ -1,0 +1,241 @@
+#! /usr/local/iverilog/bin/vvp
+:ivl_version "11.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000000000088e9d0 .scope module, "testBench" "testBench" 2 1;
+ .timescale 0 0;
+v0000000000903580_0 .var "rin1", 0 0;
+v00000000009036c0_0 .var "rin2", 0 0;
+v0000000000904520_0 .var "rin3", 0 0;
+v00000000009034e0_0 .var "rinb1", 0 0;
+v0000000000904200_0 .var "rinb2", 0 0;
+v0000000000903260_0 .var "rinb3", 0 0;
+v0000000000903440_0 .net "wout", 0 0, L_0000000000905690;  1 drivers
+v0000000000902f40_0 .net "woutb", 0 0, L_0000000000905310;  1 drivers
+S_00000000009bbc30 .scope module, "ha_inst2" "xor3" 2 6, 3 15 0, S_000000000088e9d0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /INPUT 1 "in2";
+    .port_info 3 /INPUT 1 "in3";
+v0000000000903e40_0 .net "in1", 0 0, v0000000000903580_0;  1 drivers
+v0000000000904c00_0 .net "in2", 0 0, v00000000009036c0_0;  1 drivers
+v0000000000903760_0 .net "in3", 0 0, v0000000000904520_0;  1 drivers
+v00000000009033a0_0 .net "inter", 0 0, L_00000000009055b0;  1 drivers
+v0000000000903ee0_0 .net "out", 0 0, L_0000000000905690;  alias, 1 drivers
+S_0000000000894960 .scope module, "oneg" "xor2" 3 21, 3 1 0, S_00000000009bbc30;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /INPUT 1 "in2";
+L_0000000000905850 .functor NOT 1, v00000000009036c0_0, C4<0>, C4<0>, C4<0>;
+L_0000000000905380 .functor NOT 1, v0000000000903580_0, C4<0>, C4<0>, C4<0>;
+L_00000000009053f0 .functor AND 1, v0000000000903580_0, L_0000000000905850, C4<1>, C4<1>;
+L_0000000000905930 .functor AND 1, v00000000009036c0_0, L_0000000000905380, C4<1>, C4<1>;
+L_00000000009055b0 .functor XOR 1, L_00000000009053f0, L_0000000000905930, C4<0>, C4<0>;
+v0000000000888c70_0 .net "in1", 0 0, v0000000000903580_0;  alias, 1 drivers
+v0000000000888e50_0 .net "in2", 0 0, v00000000009036c0_0;  alias, 1 drivers
+v00000000008897b0_0 .net "innot1", 0 0, L_0000000000905380;  1 drivers
+v00000000008895d0_0 .net "innot2", 0 0, L_0000000000905850;  1 drivers
+v0000000000889030_0 .net "out", 0 0, L_00000000009055b0;  alias, 1 drivers
+v00000000008892b0_0 .net "sum1", 0 0, L_00000000009053f0;  1 drivers
+v0000000000889490_0 .net "sum2", 0 0, L_0000000000905930;  1 drivers
+S_00000000008962a0 .scope module, "twog" "xor2" 3 22, 3 1 0, S_00000000009bbc30;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /INPUT 1 "in2";
+L_0000000000905620 .functor NOT 1, L_00000000009055b0, C4<0>, C4<0>, C4<0>;
+L_0000000000905b60 .functor NOT 1, v0000000000904520_0, C4<0>, C4<0>, C4<0>;
+L_0000000000905af0 .functor AND 1, v0000000000904520_0, L_0000000000905620, C4<1>, C4<1>;
+L_0000000000905bd0 .functor AND 1, L_00000000009055b0, L_0000000000905b60, C4<1>, C4<1>;
+L_0000000000905690 .functor XOR 1, L_0000000000905af0, L_0000000000905bd0, C4<0>, C4<0>;
+v0000000000904b60_0 .net "in1", 0 0, v0000000000904520_0;  alias, 1 drivers
+v00000000009048e0_0 .net "in2", 0 0, L_00000000009055b0;  alias, 1 drivers
+v0000000000903620_0 .net "innot1", 0 0, L_0000000000905b60;  1 drivers
+v00000000009038a0_0 .net "innot2", 0 0, L_0000000000905620;  1 drivers
+v0000000000903a80_0 .net "out", 0 0, L_0000000000905690;  alias, 1 drivers
+v0000000000903d00_0 .net "sum1", 0 0, L_0000000000905af0;  1 drivers
+v00000000009042a0_0 .net "sum2", 0 0, L_0000000000905bd0;  1 drivers
+S_0000000000896430 .scope module, "ha_inst3" "xor3_b" 2 5, 3 25 0, S_000000000088e9d0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "in1";
+    .port_info 2 /INPUT 1 "in2";
+    .port_info 3 /INPUT 1 "in3";
+L_00000000008a6a60 .functor NOT 1, v00000000009034e0_0, C4<0>, C4<0>, C4<0>;
+L_00000000008a6ad0 .functor NOT 1, v0000000000904200_0, C4<0>, C4<0>, C4<0>;
+L_00000000008a6d00 .functor NOT 1, v0000000000903260_0, C4<0>, C4<0>, C4<0>;
+L_0000000000905d20 .functor AND 1, L_00000000008a6a60, v0000000000904200_0, C4<1>, C4<1>;
+L_0000000000905d90 .functor AND 1, L_00000000008a6ad0, v00000000009034e0_0, C4<1>, C4<1>;
+L_00000000009052a0 .functor OR 1, L_0000000000905d20, L_0000000000905d90, C4<0>, C4<0>;
+L_0000000000905230 .functor NOT 1, L_00000000009052a0, C4<0>, C4<0>, C4<0>;
+L_00000000009057e0 .functor AND 1, L_00000000009052a0, L_00000000008a6d00, C4<1>, C4<1>;
+L_0000000000905770 .functor AND 1, L_0000000000905230, v0000000000903260_0, C4<1>, C4<1>;
+L_0000000000905310 .functor OR 1, L_00000000009057e0, L_0000000000905770, C4<0>, C4<0>;
+v0000000000903800_0 .net "finsum1", 0 0, L_00000000009057e0;  1 drivers
+v0000000000904700_0 .net "finsum2", 0 0, L_0000000000905770;  1 drivers
+v00000000009047a0_0 .net "in1", 0 0, v00000000009034e0_0;  1 drivers
+v0000000000904020_0 .net "in2", 0 0, v0000000000904200_0;  1 drivers
+v0000000000904ca0_0 .net "in3", 0 0, v0000000000903260_0;  1 drivers
+v00000000009045c0_0 .net "innot1", 0 0, L_00000000008a6a60;  1 drivers
+v0000000000904980_0 .net "innot2", 0 0, L_00000000008a6ad0;  1 drivers
+v0000000000904ac0_0 .net "innot3", 0 0, L_00000000008a6d00;  1 drivers
+v0000000000904d40_0 .net "out", 0 0, L_0000000000905310;  alias, 1 drivers
+v0000000000903f80_0 .net "part1", 0 0, L_00000000009052a0;  1 drivers
+v0000000000903300_0 .net "partnot1", 0 0, L_0000000000905230;  1 drivers
+v0000000000902ea0_0 .net "sum1", 0 0, L_0000000000905d20;  1 drivers
+v0000000000904660_0 .net "sum2", 0 0, L_0000000000905d90;  1 drivers
+    .scope S_000000000088e9d0;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 10 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 13 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 16 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 19 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 22 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 25 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 28 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009034e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904200_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903260_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 31 "$display", "xor3_b output is %b from input %b and %b and %b", v0000000000902f40_0, v00000000009034e0_0, v0000000000904200_0, v0000000000903260_0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000000000088e9d0;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 36 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 39 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 42 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 45 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 48 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 51 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 54 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000903580_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009036c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000904520_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 57 "$display", "output is %b from input %b and %b and %b", v0000000000903440_0, v0000000000903580_0, v00000000009036c0_0, v0000000000904520_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_000000000088e9d0;
+T_2 ;
+    %vpi_call 2 60 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call 2 61 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "main.v";

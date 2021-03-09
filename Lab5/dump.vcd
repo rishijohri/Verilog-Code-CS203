@@ -1,0 +1,704 @@
+$date
+	Tue Nov 24 12:07:31 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 8 ! out [7:0] $end
+$var reg 1 " clock $end
+$var reg 8 # d [7:0] $end
+$var reg 1 $ l $end
+$var reg 1 % sh $end
+$var reg 1 & shl $end
+$var reg 1 ' si $end
+$scope module register $end
+$var wire 1 " clk $end
+$var wire 8 ( d [7:0] $end
+$var wire 1 $ l $end
+$var wire 1 % sh $end
+$var wire 1 & shl $end
+$var wire 1 ' si $end
+$var wire 1 ) upd_clk $end
+$var wire 4 * redout [3:0] $end
+$var wire 8 + out [7:0] $end
+$var reg 1 , zero $end
+$scope module L0 $end
+$var wire 1 , in1 $end
+$var wire 1 - in2 $end
+$var wire 1 . in3 $end
+$var wire 1 / in4 $end
+$var wire 1 0 in5 $end
+$var wire 1 ) clock $end
+$var reg 33 1 mem [32:0] $end
+$var reg 1 2 out $end
+$var reg 1 3 tem $end
+$var reg 1 4 tem2 $end
+$upscope $end
+$scope module L1 $end
+$var wire 1 5 in1 $end
+$var wire 1 6 in2 $end
+$var wire 1 7 in3 $end
+$var wire 1 8 in4 $end
+$var wire 1 9 in5 $end
+$var wire 1 ) clock $end
+$var reg 33 : mem [32:0] $end
+$var reg 1 ; out $end
+$var reg 1 < tem $end
+$var reg 1 = tem2 $end
+$upscope $end
+$scope module L2 $end
+$var wire 1 > in1 $end
+$var wire 1 ? in2 $end
+$var wire 1 @ in3 $end
+$var wire 1 A in4 $end
+$var wire 1 B in5 $end
+$var wire 1 ) clock $end
+$var reg 33 C mem [32:0] $end
+$var reg 1 D out $end
+$var reg 1 E tem $end
+$var reg 1 F tem2 $end
+$upscope $end
+$scope module L3 $end
+$var wire 1 G in1 $end
+$var wire 1 H in2 $end
+$var wire 1 I in3 $end
+$var wire 1 J in4 $end
+$var wire 1 K in5 $end
+$var wire 1 ) clock $end
+$var reg 33 L mem [32:0] $end
+$var reg 1 M out $end
+$var reg 1 N tem $end
+$var reg 1 O tem2 $end
+$upscope $end
+$scope module L4 $end
+$var wire 1 P in1 $end
+$var wire 1 Q in2 $end
+$var wire 1 R in3 $end
+$var wire 1 S in4 $end
+$var wire 1 T in5 $end
+$var wire 1 ) clock $end
+$var reg 33 U mem [32:0] $end
+$var reg 1 V out $end
+$var reg 1 W tem $end
+$var reg 1 X tem2 $end
+$upscope $end
+$scope module L5 $end
+$var wire 1 Y in1 $end
+$var wire 1 Z in2 $end
+$var wire 1 [ in3 $end
+$var wire 1 \ in4 $end
+$var wire 1 ] in5 $end
+$var wire 1 ) clock $end
+$var reg 33 ^ mem [32:0] $end
+$var reg 1 _ out $end
+$var reg 1 ` tem $end
+$var reg 1 a tem2 $end
+$upscope $end
+$scope module L6 $end
+$var wire 1 b in1 $end
+$var wire 1 c in2 $end
+$var wire 1 d in3 $end
+$var wire 1 e in4 $end
+$var wire 1 f in5 $end
+$var wire 1 ) clock $end
+$var reg 33 g mem [32:0] $end
+$var reg 1 h out $end
+$var reg 1 i tem $end
+$var reg 1 j tem2 $end
+$upscope $end
+$scope module L7 $end
+$var wire 1 k in1 $end
+$var wire 1 ' in2 $end
+$var wire 1 l in3 $end
+$var wire 1 m in4 $end
+$var wire 1 n in5 $end
+$var wire 1 ) clock $end
+$var reg 33 o mem [32:0] $end
+$var reg 1 p out $end
+$var reg 1 q tem $end
+$var reg 1 r tem2 $end
+$upscope $end
+$scope module clk_modifier $end
+$var wire 1 " clock $end
+$var wire 1 s in1 $end
+$var wire 1 t in2 $end
+$var wire 1 " in3 $end
+$var wire 1 , in4 $end
+$var wire 1 , in5 $end
+$var reg 33 u mem [32:0] $end
+$var reg 1 ) out $end
+$var reg 1 v tem $end
+$var reg 1 w tem2 $end
+$upscope $end
+$scope module reduction $end
+$var wire 4 x in [3:0] $end
+$var wire 4 y out [3:0] $end
+$var reg 16 z configure [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1100101 z
+b1 y
+b1 x
+0w
+0v
+b11100000 u
+0t
+1s
+0r
+0q
+0p
+b111001100101010101111000000000000 o
+0n
+1m
+0l
+0k
+0j
+1i
+0h
+b111001100101010101111000000000000 g
+0f
+1e
+1d
+0c
+0b
+0a
+0`
+0_
+b111001100101010101111000000000000 ^
+0]
+1\
+0[
+0Z
+0Y
+0X
+0W
+0V
+b111001100101010101111000000000000 U
+0T
+1S
+0R
+0Q
+0P
+0O
+1N
+0M
+b111001100101010101111000000000000 L
+0K
+1J
+1I
+0H
+0G
+0F
+0E
+0D
+b111001100101010101111000000000000 C
+0B
+1A
+0@
+0?
+0>
+0=
+0<
+0;
+b111001100101010101111000000000000 :
+09
+18
+07
+06
+05
+04
+13
+02
+b111001100101010101111000000000000 1
+00
+1/
+1.
+0-
+0,
+b0 +
+b1 *
+0)
+b1001001 (
+0'
+0&
+0%
+1$
+b1001001 #
+0"
+b0 !
+$end
+#10
+15
+1P
+1?
+1k
+1Z
+12
+1M
+b1001001 !
+b1001001 +
+1h
+14
+1O
+1j
+1)
+1w
+1v
+1"
+#16
+1q
+0i
+1`
+0N
+1E
+03
+1n
+1f
+1]
+1T
+1K
+1B
+19
+10
+1t
+b11 *
+b11 y
+0W
+1R
+1'
+0$
+b1100 x
+1%
+b1011001 #
+b1011001 (
+#20
+0)
+0v
+0"
+#30
+0`
+1i
+1W
+0E
+1<
+1c
+0k
+0Z
+1b
+1Q
+0P
+0?
+1G
+16
+05
+1p
+0h
+1_
+0M
+1D
+b10100100 !
+b10100100 +
+02
+1r
+0j
+1a
+0O
+1F
+04
+1)
+1v
+1"
+#32
+0G
+06
+1P
+1?
+0b
+0Q
+1k
+1Z
+0c
+0D
+1M
+0_
+1h
+b1001000 !
+b1001000 +
+0p
+0F
+1O
+0a
+1j
+0r
+0N
+1)
+0i
+1W
+0<
+1v
+0m
+0e
+0\
+0S
+0J
+0A
+08
+0/
+0s
+1n
+1f
+1]
+1T
+1K
+1B
+19
+10
+1t
+b10 *
+b10 y
+1q
+0R
+0'
+1&
+b10 x
+0%
+b1001001 #
+b1001001 (
+#40
+0)
+0v
+0"
+#48
+0q
+0W
+0n
+0f
+0]
+0T
+0K
+0B
+09
+00
+0t
+b0 *
+b0 y
+b0 x
+0&
+#50
+0w
+1"
+#60
+0"
+#64
+1q
+1i
+1`
+1W
+1N
+1E
+1<
+13
+1m
+1e
+1\
+1S
+1J
+1A
+18
+1/
+1s
+b1 *
+b1 y
+17
+1@
+1R
+1[
+1l
+b1 x
+1$
+b11111111 #
+b11111111 (
+#70
+1c
+1b
+1Q
+1Y
+1H
+1G
+16
+1>
+1-
+15
+1p
+1_
+1V
+1D
+1;
+b11111111 !
+b11111111 +
+12
+1r
+1a
+1X
+1F
+1=
+14
+1)
+1w
+1v
+1"
+#80
+1n
+1f
+1]
+1T
+1K
+1B
+19
+10
+1t
+b11 *
+b11 y
+0)
+1<
+1E
+1`
+0q
+0v
+07
+0@
+0[
+0l
+0"
+0$
+b100 x
+1%
+b1011001 #
+b1011001 (
+#90
+0i
+0c
+b1111111 !
+b1111111 +
+0p
+0r
+1)
+1v
+1"
+#100
+0)
+0v
+0"
+#110
+0`
+0k
+0Z
+b111111 !
+b111111 +
+0h
+0j
+1)
+1v
+1"
+#112
+1q
+05
+1k
+1Z
+02
+b1111110 !
+b1111110 +
+1h
+04
+1j
+1i
+1`
+1)
+1W
+1N
+1E
+0<
+03
+1v
+0m
+0e
+0\
+0S
+0J
+0A
+08
+0/
+0s
+1n
+1f
+1]
+1T
+1K
+1B
+19
+10
+1t
+b10 *
+b10 y
+0R
+1&
+b10 x
+0%
+b1001001 #
+b1001001 (
+#120
+0)
+0v
+0"
+#128
+0q
+0i
+1<
+13
+1m
+1e
+1\
+1S
+1J
+1A
+18
+1/
+1s
+b11 *
+b11 y
+1R
+0&
+b100 x
+1%
+b1011001 #
+b1011001 (
+#130
+0`
+0k
+0Z
+15
+0h
+b111111 !
+b111111 +
+12
+0j
+14
+1)
+1v
+1"
+#140
+0)
+0v
+0"
+#144
+1q
+b1100 x
+1'
+#150
+0W
+1i
+0b
+0Q
+1c
+0_
+b10011111 !
+b10011111 +
+1p
+0a
+1r
+1)
+1v
+1"
+#160
+1`
+1W
+0i
+1N
+1E
+1<
+03
+0m
+0e
+0\
+0S
+0J
+0A
+08
+0/
+0s
+1n
+1f
+1]
+1T
+1K
+1B
+19
+10
+1t
+b10 *
+b10 y
+0)
+0v
+0q
+0R
+0"
+0'
+1&
+b10 x
+0%
+b1001001 #
+b1001001 (
+#170
+1i
+0<
+0c
+1b
+1Q
+05
+0p
+1_
+b111110 !
+b111110 +
+02
+0r
+1a
+04
+1)
+1v
+1"
+#176
+0)
+0i
+0`
+0W
+0N
+0E
+0v
+0n
+0f
+0]
+0T
+0K
+0B
+09
+00
+0t
+b0 *
+b0 y
+1'
+b1000 x
+0&
+#180
+0"
+#190
+0w
+1"
+#192
